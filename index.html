@@ -58,19 +58,52 @@
 
       <section class="lesson-box">
         <h2>Mini theory</h2>
+        <p>
+          In this exercise, you are not just putting blocks in the right order. You are
+          building the shape of a recursive function. A correct answer needs the right
+          idea and the right indentation.
+        </p>
+
         <div class="theory">
           <div class="theory-step">
             <span>1</span>
-            <p>Base case: stop when the problem is small enough.</p>
+            <p>
+              Start with the base case. For the sum function, when <strong>n == 0</strong>,
+              the answer is <strong>0</strong>. In the exercise, that means the
+              <strong>return 0</strong> block belongs inside the <strong>if n == 0:</strong>
+              block.
+            </p>
           </div>
           <div class="theory-step">
             <span>2</span>
-            <p>Recursive case: work on a smaller input.</p>
+            <p>
+              Then add the recursive case. The function keeps working on a smaller input,
+              here <strong>n - 1</strong>. In the exercise, the recursive return block stays
+              at the same level as the <strong>if</strong>, not inside it.
+            </p>
           </div>
           <div class="theory-step">
             <span>3</span>
-            <p>Combine: use the recursive answer to build the final result.</p>
+            <p>
+              The system works like code. Click a block to add it to the function. Drop a
+              block onto another block to nest it underneath. Use the <strong>x</strong> to
+              remove a block and put it back in the list.
+            </p>
           </div>
+        </div>
+
+        <div class="challenge-text theory-example">
+          <h3>Example with sum</h3>
+          <p>This is the structure for the sum function that sums the first n natural numbers.</p>
+          <pre class="theory-code"><code>function sum(n):
+    if n == 0:
+        return 0
+    return n + sum(n - 1)</code></pre>
+          <p>
+            So in practice: add the <strong>if</strong> block, drop <strong>return 0</strong>
+            onto it to indent it, then place the recursive return block below at the main
+            function level.
+          </p>
         </div>
       </section>
 
@@ -78,24 +111,26 @@
         <div class="exercise-header">
           <div>
             <p class="eyebrow">Main learning activity</p>
-            <h2>Build the recursive solution</h2>
+            <h2 id="exercise-title">Build the recursive solution</h2>
           </div>
-          <button id="hintBtn" class="secondary-btn">Show hint</button>
         </div>
 
-        <p class="prompt">
-          Arrange the blocks in the correct order to define a recursive function for
-          the sum of the first n natural numbers.
+        <div id="exercise-selector" class="exercise-selector" aria-label="Exercise selector"></div>
+
+        <p id="exercise-prompt" class="prompt">
+          Arrange the blocks in the correct order to define a recursive function.
         </p>
+
+        <p id="exercise-instruction" class="exercise-instruction"></p>
 
         <div class="challenge-box">
           <div class="challenge-text">
             <h3>Problem</h3>
-            <p>Write a recursive function that returns the sum of all numbers from 0 to n.</p>
+            <p id="problem-text">Write a recursive function.</p>
           </div>
           <div class="goal-text">
             <h3>What to look for</h3>
-            <p>Correct base case, recursive reduction, and final combination.</p>
+            <p id="goal-text">Correct base case, recursive reduction, and final combination.</p>
           </div>
         </div>
 
