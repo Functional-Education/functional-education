@@ -464,7 +464,7 @@ function checkAnswer() {
       launchConfetti();
     }
   } else {
-    showFeedback(exercise.errorMessage, 'error');
+    showFeedback(`Incorrect. Hint: ${exercise.hint}`, 'error');
   }
 }
 
