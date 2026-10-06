@@ -1,0 +1,461 @@
+Chapter 1: Introduction
+
+Digital Education (CS-411)
+September 8, 2026
+
+Team
+Instructor
+
+Tanja Käser
+tanja.kaeser@epfl.ch
+
+Teaching Assistants
+
+Dominik Glandorf
+dominik.glandorf@epfl.ch
+
+Fatma-Betül Güres
+fatma-betul.gures@epfl.ch
+
+Students – Shake Hands
+
+Today
+• What is this course about?
+• Course logistics
+• Introduction to project
+– Project guidelines
+– Explorative activities
+
+Technology
+
+Learning
+
+Cognitive Activity
+what learners learn does not depend on the
+technology, but on the cognitive activity they
+have to do (with the technology)
+
+Technology
+
+Learning
+
+We design
+
+We measure
+
+Cognitive Activity
+We manipulate
+We collect traces of learner activity
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Adaptation
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+
+p = Probability of recalling an item
+
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+𝝙 = Time elapsed since the item was reviewed
+
+h = Half-life of the item
+
+Adaptation
+Drill & Practice
+
+Skill estimation
+
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Anderson, J. R., Corbett, A. T., Koedinger, K. R., & Pelletier, R. (1995). Cognitive Tutors: Lessons Learned.
+Journal of the Learning Sciences, 4(2), 167–207.
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+https://courseware.epfl.ch/
+
+Understanding
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Mejia-Domenzain, P., Marras, M., Giang, C., Käser, T. (2022). Identifying and Comparing Multidimensional Student Profiles Across Flipped Classrooms. AIED
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Crouch, C.H., & Mazur, E. (2001). Peer Instruction: Ten years of experience and results. American Journal
+of Physics, 69, 970-977.
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Deslauriers, L., McCarty, L. S., Miller, K., Callaghan, K., & Kestin, G. (2019). Measuring actual learning
+versus feeling of learning in response to being actively engaged in the classroom. PNAS, 116(39), 19251–
+19257.
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+https://phet.colorado.edu/
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+https://sites.google.com/ncsu.edu/intellimedia-crystalisland/
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+https://turtleacademy.com/
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+
+What about generative AI?
+
+Writing
+
+Programming
+
+Presentation
+
+Math
+
+Design
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+AI Chatbots
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+AI Chatbots
+
+https://arxiv.org/html/2512.23633v1
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+
+GenAI enables flexible, open-ended natural
+language interaction.
+
+Educational Robotics
+AI Chatbots
+
+Graesser, A. C., Lu, S., Tanner Jackson, G., Mitchell, M. M., Ventura, M., Olney, A. & Louwerse, M.
+M. (2004). AutoTutor: A tutor with dialogue in natural language. Behavior Research Methods,
+Instruments, & Computers 36, 180–192
+
+LLMs – One model for it all!
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+AI Chatbots
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+Learning management systems
+Classroom participation systems
+Simulations
+Serious Games
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+AI Chatbots
+
+E. Shved, E. Bumbacher, S. P. Neshaei and T. Käser (2026). Teaching Multivariational Reasoning through
+AI-Guided Inquiry in Interactive Simulations, AIED.
+
+Drill & Practice
+Intelligent tutoring systems
+Online courses
+
+many technologies!
+
+Learning management systems
+Classroom participation systems
+
+how do they support learning?
+
+Simulations
+Serious Games
+
+how do we learn?
+
+Microworlds
+Augmented reality
+Virtual reality
+Educational Robotics
+AI Chatbots
+
+how can we design AI affordances that
+foster learning?
+
+How do we learn?
+
+What affordances of
+AI can support
+learning?
+How can we
+measure learning?
+
+CS-411: 6 credits
+• Written exam (50%): we will make a past example available on Moodle
+• Project (50%):
+– Teams of 3 people
+– Select a topic that is difficult to understand
+– Design learning activities with and without AI affordance
+– Run an experiment and evaluate it
+– There will be intermediate mandatory milestones
+– Present the final project on December 15 (in-person attendance mandatory)
+– 20% initial draft (M3), 20% plan + working conditions (M4), 30% poster
+presentation (M6), 30% final report (M7)
+
+Detailed instructions on Moodle
+
+Detailed instructions on Moodle
+
+The project
+• Design a lesson with and without AI affordances
+• We expect you to use generative AI as part of your project work,
+including to support coding and other project tasks.
+– You remain responsible for all content and work you submit.
+– You must be able to justify your design decisions and explain all
+choices, analyses, and results.
+
+• Document your interactions with generative AI. We will use these
+interactions throughout the semester to reflect on how AI can
+support—or hinder—learning and work, connecting your own
+experiences to the theories discussed in class.
+
+The objectives
+• You will learn to:
+– Define specific, measurable learning goals
+– Apply learning theories to design activities
+– Implement an AI-supported digital lesson
+– Design and execute an experiment comparing AI-support with a non-AI
+version.
+– Analyze data quantitatively and qualitatively
+– Collaborate effectively with AI
+– Analyze how different ways of using AI can support or hinder learning
+– Critically reflect on your own use of AI for learning
+
+Your Experience
+1• How are you using generative AI for your learning?
+2• What tools are you using and how are you using
+
+them?
+3• How do they support your learning?
+
+Three Examples
+• REFINE – AI feedback
+• PharmaSim – AI scaffolding
+• Pensée – AI-supported reflection
+
+Analyze the learning activity
+1•
+
+Where and how is AI used in the learning
+environment?
+
+2•
+
+What learning activity is the AI affordance
+intended to support?
+
+3•
+
+How might this affordance support—or hinder—
+learning?
+
+Pensée – Supporting reflection
+
+Neshaei, S. P., Davis, R. L., & Käser, T. (2026). Moving Beyond Review: Applying Language Models to Planning and Translation in
+Reflection. AIED
+
+Pensée – Behind the scenes
+
+Neshaei, S. P., Davis, R. L., & Käser, T. (2026). Moving Beyond Review: Applying Language Models to Planning and Translation in
+Reflection. AIED
+
+PharmaSim – Supporting diagnostic reasoning
+
+Güres, F. B., Nazaretsky, T., Neshaei, S. P., & Käser, T. (2026). Structuring versus Problematizing: How LLM-based Agents Scaffold
+Learning in Diagnostic Reasoning, Proc. LAK, https://doi.org/10.1145/3785022.3785105
+
+PharmaSim – Behind the scenes
+
+Güres, F. B., Nazaretsky, T., Neshaei, S. P., & Käser, T. (2026). Structuring versus Problematizing: How LLM-based Agents Scaffold
+Learning in Diagnostic Reasoning, Proc. LAK, https://doi.org/10.1145/3785022.3785105
+
+REFINE
+
+Fawzi, F. , Neshaei, S. P., Knezevic, M., Nazaretsky, T., Käser, T. (2026). REFINE: Real-World Exploration of Interactive Feedback and Student Behaviour, AIED.
+
+See you next week at 8:15am!
+
+

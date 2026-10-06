@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Education</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">Functional Education</div>
+        <nav>
+          <a href="#intro">Intro</a>
+          <a href="#concepts">Concepts</a>
+          <a href="#activity">Activity</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="intro" class="hero">
+        <div>
+          <p class="eyebrow">Milestone 3 prototype</p>
+          <h1>Recursive thinking with functional blocks</h1>
+          <p class="subtitle">
+            Learn the basics of recursive functions without mutable data by assembling
+            the key pieces of a correct solution.
+          </p>
+        </div>
+      </section>
+
+      <section id="concepts" class="card-grid">
+        <article class="card">
+          <h2>Goal</h2>
+          <p>
+            Understand how a recursive algorithm stops and how it reduces the problem
+            at each step.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Key idea</h2>
+          <p>
+            A recursive function has a base case and a recursive case. The base case
+            stops the process, and the recursive case calls itself on a smaller input.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Functional style</h2>
+          <p>
+            No mutation. We create a new result from the current value and the recursive
+            result.
+          </p>
+        </article>
+      </section>
+
+      <section class="lesson-box">
+        <h2>Mini theory</h2>
+        <div class="theory">
+          <div class="theory-step">
+            <span>1</span>
+            <p>Base case: stop when the problem is small enough.</p>
+          </div>
+          <div class="theory-step">
+            <span>2</span>
+            <p>Recursive case: work on a smaller input.</p>
+          </div>
+          <div class="theory-step">
+            <span>3</span>
+            <p>Combine: use the recursive answer to build the final result.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="activity" class="exercise">
+        <div class="exercise-header">
+          <div>
+            <p class="eyebrow">Main learning activity</p>
+            <h2>Build the recursive solution</h2>
+          </div>
+          <button id="hintBtn" class="secondary-btn">Show hint</button>
+        </div>
+
+        <p class="prompt">
+          Arrange the blocks in the correct order to define a recursive function for
+          the sum of the first n natural numbers.
+        </p>
+
+        <div class="challenge-box">
+          <div class="challenge-text">
+            <h3>Problem</h3>
+            <p>Write a recursive function that returns the sum of all numbers from 0 to n.</p>
+          </div>
+          <div class="goal-text">
+            <h3>What to look for</h3>
+            <p>Correct base case, recursive reduction, and final combination.</p>
+          </div>
+        </div>
+
+        <div class="board">
+          <div class="bank-panel">
+            <h3>Blocks</h3>
+            <div id="block-bank" class="block-bank"></div>
+          </div>
+
+          <div class="answer-panel">
+            <h3>Your solution</h3>
+            <div id="answer-zone" class="answer-zone" aria-label="Answer zone"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="checkBtn" class="primary-btn">Check answer</button>
+          <button id="resetBtn" class="secondary-btn">Reset</button>
+        </div>
+
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

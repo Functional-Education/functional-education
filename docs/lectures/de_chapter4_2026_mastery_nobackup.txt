@@ -1,0 +1,409 @@
+Chapter 4: Learning through mastery
+
+Digital Education (CS-411)
+September 29, 2026
+
+From exploration to consolidation
+Exploration
+
+Consolidation
+
+• Carefully design the materials
+• Comparisons, playing with differences
+• Conflict: trapping predictions
+There is a time for telling
+• Push reflection
+
+Can you figure out what to do?
+There is something I want you to do.
+
+• You can try anything.
+• I will not give you any instructions.
+
+• A clap is the only feedback you will receive.
+
+Edward L. Thorndike (1874–1949)
+
+The Law of Effect
+
+Behavior followed by satisfying consequences becomes
+more likely to be repeated;
+behavior followed by unpleasant consequences becomes
+less likely.
+
+Puzzle box
+
+Escape time decreases across trials
+
+Thorndike, E. L. (1927). The Law of Effect, The American Journal of Psychology, 39, 212–222.
+
+Behaviorism
+
+The Little Albert Experiment
+
+B. F. Skinner (1904–1990)
+Operant conditioning
+
+Skinner, B. F. (1953). Science and human behavior, Macmillan
+
+Key ideas of behaviorism
+1 The mind is a black box; the focus is on observable behavior
+2 Associations are strengthened through immediate feedback
+
+3 The learner is continuously active
+4 Small steps increase the probability of positive feedback
+
+Constructivist vs. behaviorist approach
+Constructivist approach
+
+Behaviorist approach
+
+Errors can be productive
+
+Aim for frequent success
+
+Delayed telling to allow discovery
+
+Immediate feedback
+
+Larger, more open problem space
+
+Small, carefully sequenced steps
+
+Learner explores alternatives
+
+Learner repeatedly responds
+
+Difficulty can provoke knowledge
+construction
+
+Difficulty is managed to maintain successful
+responding
+
+Reward
+Core learning mechanism:
+Rewarding a behavior makes it more likely to be repeated; rewarding
+successive approximations can shape new behavior.
+Why it works:
+Rewards can motivate learners to repeat rewarded behaviors in similar
+situations. By reinforcing progressively closer approximations, a complex
+target behavior can be built up gradually.
+Example:
+A math program gives students practice problems. After several correct
+answers in a row, the learner unlocks new items for customizing their character.
+
+Can you determine the day of the week?
+20 May 2041
+No calendar. No phone. No computer.
+
+Doomsday algorithm
+
+John Conway, 1973
+
+• The Gregorian calendar moves in cycles
+of 400 years
+• Each year has a certain weekday
+(doomsday) on which easy to remember
+dates fall
+• Century anchor: the doomsday at the
+start of the century
+
+Doomsday dates: 4/4, 6/6, 8/8, 10/10, 12/12, 5/9, 9/5, 7/11, 11/7
+Century anchors: 1800 – Friday, 1900 Wednesday, 2000 Tuesday
+Find Doomsday of year
+
+Find nearby doomsday date
+and count from there
+
+𝟒𝟏 = 3 ∙ 12 + 5
+
+May 9 is a Thursday
+
+5/4 = 1
+
+20 − 9 = 11
+
+3+5+1=9
+
+11 mod 7 = 4
+
+9 mod 7 = 2
+
+Thursday + 4 = Monday
+
+Tuesday + 2 = Thursday
+
+Your turn
+• What weekday was 20 July 1969?
+• What weekday was 2 September 1888?
+
+Worked examples
+Core learning mechanism:
+Learners study a step-by-step demonstration of how to complete a procedural
+task.
+Why it works:
+Worked examples let novices observe well-defined solution steps and expert
+thinking. They reduce unnecessary search so learners can focus on the steps
+and relationships that produce a solution.
+Example:
+To learn the Doomsday algorithm, students first observe a complete solution in
+which the instructor demonstrates and explains each step of the method.
+
+Deliberate Practice
+Core learning mechanism:
+Learners engage in focused and effortful practice to develop specific skills and
+concepts beyond their current abilities.
+Why it works:
+Deliberate practice improves accuracy and fluency and makes skills less
+effortful to execute. This frees cognitive resources for more complex tasks and
+helps learners recognize meaningful patterns.
+Example:
+Practicing Doomsday problems with different century anchors and counting
+directions.
+
+Feedback
+Core learning mechanism:
+Feedback allows learners to sense the discrepancy between what they did and
+what they should have done, enabling them to adjust future actions.
+Why it works:
+Learners need information about whether they are on the right track. Effective
+feedback identifies the discrepancy and, ideally, points to what should be
+changed or improved.
+Example:
+A student solves 0,4 ∙ 0,3 = 0.12. The system identifies the incorrect
+placement of the decimal point and explains how to correct it.
+
+Formative Feedback
+
+Hattie, J., & Timperley, H. (2007). The power of feedback. Review of Educational Research, 77(1), 81–112
+
+Fawzi, F., Neshaei, S. P., Knezevic, M., Nazaretsky, T., & Käser, T.
+(2026). REFINE: Real-World Exploration of Interactive Feedback
+and Student Behaviour, AIED
+
+Key ideas of behaviorism
+1 The mind is a black box; the focus is on observable behavior
+2 Associations are strengthened through immediate feedback
+
+3 The learner is continuously active
+4 Small steps increase the probability of positive feedback
+
+Skinner’s Teaching Machine
+Student response
+window
+
+Question/
+answer window
+
+Question /
+answer disk
+Answer strip
+
+Score /
+Advance Lever
+
+Instructional disks containing questions and
+answers are placed inside the machine.
+Students:
+1. Read a question through the window
+2. Write their response on a paper strip
+3. Compare their response with the correct
+answer
+4. Move a lever to record whether their
+answer was correct
+5. Advance to the next question
+The machine keeps score and controls
+progression.
+
+Frame-based models / E-Learning
+1. Information
+2. Question
+3. Feedback
+1. Information
+2. Question
+3. Feedback
+1. Information
+2. Question
+3. Feedback
+1. Information
+2. Question
+3. Feedback
+1. Information
+2. Question
+3. Feedback
+
+1. Decomposition: Segment complex content into a
+sequence of learning steps, each containing an
+elementary piece of information.
+2. Keep the student active: Ask the student to process
+each new piece of information.
+
+3. Immediate feedback: Provide feedback after each
+response.
+4. Self-paced progression: Let the student move on
+at their own speed.
+
+From small steps to prerequisites
+𝑆𝑘𝑖𝑙𝑙1 is prerequisite to 𝑆𝑘𝑖𝑙𝑙2 if
+𝑝(𝑆𝑘𝑖𝑙𝑙2 |¬𝑆𝑘𝑖𝑙𝑙1) << 𝑝(𝑆𝑘𝑖𝑙𝑙2 | 𝑆𝑘𝑖𝑙𝑙1)
+
+Skill1: « 6 + 9 »
+Skill2: « 26 + 39 »
+
+Skill1: to find the verb
+Skill2: to agree it with the subject
+
+Skill1: mean
+Skill2: standard deviation
+
+Skill1: to read
+Skill2: to code
+
+Mastery learning
+If prerequisites are missing, remediate them before going on
+
+Course prerequisite map
+
+https://www.ist.uh.edu/programs/undergraduate/computer-information-systems/prerequisite-map
+
+Mastery learning
+Control mastery of 𝑠𝑘𝑖𝑙𝑙𝑖 before you go to 𝑠𝑘𝑖𝑙𝑙𝑖+1
+
+Modular Instruction
+
+Pre-requisite test: Does the learner has the pre-requisite to start the course ?
+Pre-test:
+
+Should the learner skip some modules ?
+
+Intermediate-test: Did the learner reach the objectives of this module ?
+Post-test:
+
+Did the learner reach the objectives of this course?
+
+Adaptive Testing
+
+Decomposition
+
+Constructivist vs. behaviorist approach
+Constructivist approach
+
+Behaviorist approach
+
+Errors can be productive
+
+Aim for frequent success
+
+Delayed telling to allow discovery
+
+Immediate feedback
+
+Larger, more open problem space
+
+Small, carefully sequenced steps
+
+Learner explores alternatives
+
+Learner repeatedly responds
+
+Difficulty can provoke knowledge
+construction
+
+Difficulty is managed to maintain successful
+responding
+
+Instructional design starts with :
+What should learners know at the end ?
+(which they did not know at the beginning)
+
+What should learners be able to do at the end ?
+(which they could not do at the beginning)
+
+How will I know they are able to do it ?
+
+What would be the exam questions or tasks ?
+
+Learning activities
+
+How can we sequence activities?
+When is an activity 𝑎𝑖 useful for an activity 𝑎𝑖+1 ?
+1. 𝑎𝑖 is a pre-requisite for 𝑎𝑖+1
+
+How can we sequence activities?
+When is an activity 𝑎𝑖 useful for an activity 𝑎𝑖+1 ?
+1. 𝑎𝑖 is a pre-requisite for 𝑎𝑖+1
+2. 𝑎𝑖 activates a cognitive schema needed in 𝑎𝑖+1
+
+Advance organizer
+
+How can we sequence activities?
+When is an activity 𝑎𝑖 useful for an activity 𝑎𝑖+1 ?
+1. 𝑎𝑖 is a pre-requisite for 𝑎𝑖+1
+2. 𝑎𝑖 activates a cognitive schema needed in 𝑎𝑖+1
+3. 𝑎𝑖+1 varies the representation used in 𝑎𝑖
+
+Shift representation
+𝑎𝑖+1 represents content differently from 𝑎𝑖
+
+How can we sequence activities?
+When is an activity 𝑎𝑖 useful for an activity 𝑎𝑖+1 ?
+1. 𝑎𝑖 is a pre-requisite for 𝑎𝑖+1
+2. 𝑎𝑖 activates a cognitive schema needed in 𝑎𝑖+1
+3. 𝑎𝑖+1 varies the representation used in 𝑎𝑖
+4. …
+
+Two tasks…
+A chocolate bar costs 5 CHF. How many bars can you
+buy for 25 CHF ?
+A man walks 1 km in 5 min. How many km can he walk
+in 25 min ?
+
+How can we support transfer?
+1. By reinstantiating skills in various contexts
+2. By targeting a deeper understanding
+
+Represent 35₁₀ in base 3.
+
+Calculate directly in base 3:
+
+122₃
++ 222₃
+
+From exploration to consolidation
+Exploration
+
+Consolidation
+
+• Carefully design the materials
+• Comparisons, playing with differences
+• Conflict: trapping predictions
+There is a time for telling
+• Push reflection
+
+How can we sequence activities?
+When is an activity 𝑎𝑖 useful for an activity 𝑎𝑖+1 ?
+1. 𝑎𝑖 is a pre-requisite for 𝑎𝑖+1
+2. 𝑎𝑖 activates a cognitive schema needed in 𝑎𝑖+1
+3. 𝑎𝑖+1 varies the representation used in 𝑎𝑖
+4. 𝑎𝑖+1 practices the transfer of skills acquired in 𝑎𝑖
+
+Instructional design is not about choosing one
+theory. It is about combining learning mechanisms
+in ways that serve the learning objectives.
+Exploration
+
+Worked Example
+
+Contrasting Cases
+
+Deliberate Practice
+
+Feedback
+
+Worked Example
+
+Practice + Undoing
+
+Consolidation
+
+

@@ -1,0 +1,24 @@
+functional education
+	
+narrowing of the subject : 
+	- recursive functions without mutable data. (basics of functional prog)
+	
+	
+learning goals : 
+	- Compare two implementations of recursive functions to tell which one follows the idioms of functional programming
+	- Explain the stop condition and recursion logic of the recursive algorithm
+	- Design a recursive algorithm for a specific problem based on an iterative algorithm
+	
+	
+learning activities : 
+	- theory
+	- compare two or more implementations of recursive functions following functional programming idioms (one correct) and choose the correct one (with AI, explain why one is right and the others are wrong to get evaluative feedback)
+	- blocs to put in the "right order" to make a recursive version of a given iterative algorithm. (with AI, justify the solution and get evaluative feedback)
+	- if possible do a final exercise to write a full function in pseudocode without the bloc system. (maybe python)
+
+
+research question : How does evaluative feedback of an AI tool support learning of recursive algorithms in functional programming of undergraduate students in scientific topics ?
+
+
+target population : undergraduate students with basics of programming 
+

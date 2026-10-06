@@ -1,0 +1,321 @@
+Chapter 2: Memory & Learning
+
+Digital Education (CS-411)
+September 15, 2026
+
+To understand how people learn, we need to ‘understand’
+the constraints of our memory system.
+Learning produces knowledge and skills that can be used later.
+
+Memory
+
+Experiment 1
+
+Name as many cities as possible in 30 seconds.
+
+Experiment 2
+
+Memorize the following list of
+cities during 30 seconds.
+
+1. Manchester
+2. Brussels
+3. Lille
+4. Athens
+5. Lisbon
+6. Amsterdam
+7. Paris
+8. Washington
+9. Camberra
+10. Tunis
+11. Montreal
+12. Tokyo
+13. Oslo
+14. Berlin
+15. Bratislava
+16. Tashkent
+17. Bejing
+18. Calcutta
+19. Marseille
+20. Basel
+
+To understand how people learn, we need to ‘understand’
+the constraints of our memory system.
+But learning is much more than memorizing.
+
+NUUK
+
+What is the capital of Greenland?
+
+An information processing model
+
+My phone number is: 078 725 36 92
+
+My phone number is: 078 725 36 92
+
+An information processing model
+
+My car plate is: VD 312 864
+
+Read Aloud
+For a long time, Nuuk was occupied by the
+Dorset culture around the former settlement
+of Kangeq but they disappeared from the
+Nuuk district before AD 1000. The Nuuk area
+was later inhabited by Viking explorers in the
+10th century (Western Settlement), and
+shortly thereafter by Inuit peoples.
+
+My car plate is: VD 312 864
+
+An information processing model
+
+My passcode is: 321478
+
+Read Aloud
+For a long time, Nuuk was occupied by the
+Dorset culture around the former settlement
+of Kangeq but they disappeared from the
+Nuuk district before AD 1000. The Nuuk area
+was later inhabited by Viking explorers in the
+10th century (Western Settlement), and
+shortly thereafter by Inuit peoples.
+
+What is my passcode?
+
+An information processing model
+
+An information processing model
+
+I learned
+
+What determines what gets into and comes
+out of long-term memory?
+
+Activity 1 – Doctor Visit
+You will see three experiments that investigate people's
+knowledge and memory for doctor visits. For each
+experiment, identify patterns you find interesting or
+surprising. Compare across experiments when useful.
+Find a way to summarize or visualize the most important
+patterns. For each pattern, identify the evidence in the
+data and try to explain why it might occur.
+
+Knowledge organization in long-term memory
+Fact: Nuuk is the capital of Greenland.
+Schema: Organized structure of knowledge about
+a concept or situation.
+
+Knowledge organization in long-term memory
+Fact: Nuuk is the capital of Greenland.
+Schema: Organized structure of knowledge about
+a concept or situation.
+Script: A schema for a familiar sequence of events.
+
+Check in → Wait → Nurse → Doctor → Treatment → Leave
+
+Stereotypical Recall
+Check in → Sit down → Read magazine → Name called
+→ Enter exam room → Nurse tests → Doctor examines
+→ Make another appointment → Leave office
+
+People remember events of high stereotypy.
+
+Check in → Read magazines → Name called → Undress
+→ Talk to nurse → Doctor enters → Doctor friendly →
+Prescribed pills → Leave
+
+Script Intrusion
+Check in → Sit down → Read magazines → Name called
+→ Undress → Talk to nurse → Nurse tests → Doctor
+enters → Doctor friendly → Doctor examines →
+Prescribed pills → Leave
+People falsely remember events from own script.
+
+Check in with receptionist > Four chairs in waiting room > Read
+magazines > Nurse calls his name > Undress > Put clothes on coat
+hanger > Talk to nurse > Doctor enters > Doctor is very friendly >
+Doctor prescribes pills > Forgot wallet > Leave office
+P15: Check in > Wait/read > Nurse > Doctor > Prescription > Wallet
+
+P18: Receptionist > Wait > Nurse > Doctor > Wallet > Leave
+P20: Check in > Wait/read < Nurse > Doctor > Wallet
+
+Ordered Recall
+1 Check in with receptionist > 2 Four chairs in waiting room > 3 Read
+
+magazines > 4 Nurse calls his name > 5 Undress > 6 Put clothes on coat
+hanger > 7 Talk to nurse > 8 Doctor enters > 9 Doctor is very friendly > 10
+Doctor prescribes pills > 11 Forgot wallet > 12 Leave office
+P15: 1 Check in 3 Wait/read 4 Nurse 7 Doctor 10 Prescription 11 Wallet
+P18: 1 Receptionist 3 Wait 4 Nurse 7 Doctor 11 Wallet 12 Leave
+P20: 1 Check in 3 Wait/read 4 Nurse 7 Doctor 11 Wallet
+
+People remember events in chronological sequence.
+
+Stereotypical Recall
+Check in with receptionist > Four chairs in waiting room > Read
+magazines > Nurse calls his name > Undress > Put clothes on coat
+hanger > Talk to nurse > Doctor enters > Doctor is very friendly >
+Doctor prescribes pills > Forgot wallet > Leave office
+P15: Check in > Wait/read > Nurse > Doctor > Prescription > Wallet
+
+P18: Receptionist > Wait > Nurse > Doctor > Wallet > Leave
+P20: Check in > Wait/read < Nurse > Doctor > Wallet
+
+People remember events of high stereotypy.
+
+Obstacle Recall
+Check in with receptionist > Four chairs in waiting room > Read
+magazines > Nurse calls his name > Undress > Put clothes on coat
+hanger > Talk to nurse > Doctor enters > Doctor is very friendly >
+Doctor prescribes pills > Forgot wallet > Leave office
+P15: Check in > Wait/read > Nurse > Doctor > Prescription > Wallet
+
+P18: Receptionist > Wait > Nurse > Doctor > Wallet > Leave
+P20: Check in > Wait/read < Nurse > Doctor > Wallet
+
+People remember obstacles to goal completion.
+
+Activity 2 – Balloon Passage
+You will see two experiments investigating people's
+memory for a passage. For each experiment, identify
+patterns you find interesting or surprising. Compare
+across experiments when useful. Find a way to
+summarize or visualize the most important patterns. For
+each pattern, identify the evidence in the data and try to
+explain why it might occur.
+
+1 — If the balloons popped, the sound would not be able to carry.
+2 — Everything would be too far away from the correct floor.
+…
+12 — Then there would be fewer potential problems.
+13 — With face to face contact, the least number of things could go wrong.
+Immediate Recall
+P1: 13 – 12 – 1 – 8 – 3
+P2: 13 – 11 – 1 – 5
+P3: 13 – 1 – 9 – 4
+P4: 12 – 13 – 1 – 10 – 6
+
+Delayed Recall
+P5: 1 – 2 –5
+P6: 1 – 7
+P7: 3 – 1 –13 – 8
+P8: 1 – 2 – 10
+
+Primacy and Recency
+1 — If the balloons popped, the sound would not be able to carry.
+2 — Everything would be too far away from the correct floor.
+…
+12 — Then there would be fewer potential problems.
+13 — With face to face contact, the least number of things could go wrong.
+Immediate Recall
+P1: 13 – 12 – 1 – 8 – 3
+P2: 13 – 11 – 1 – 5
+P3: 13 – 1 – 9 – 4
+P4: 12 – 13 – 1 – 10 – 6
+
+Delayed Recall
+P5: 1 – 2 –5
+P6: 1 – 7
+P7: 3 – 1 –13 – 8
+P8: 1 – 2 – 10
+
+People remember first and last items of a stimulus list.
+
+Total Recall
+
+People remember more if material is meaningful.
+
+Verbatim vs. Gist
+Passage: If the balloons popped, the sound would not be able to carry.
+
+P17: If the balloons popped, the sound would not be able to carry.
+P21: If the balloons pop, the sound won’t reach the window.
+
+Meaning leads to gist recall; nonsense leads to verbatim recall.
+
+Inference intrusions
+Passage: The human voice is not loud enough to carry that far.
+
+P23: But his voice won't be loud enough to reach the window.
+Passage: A break in the middle of the wire would also cause
+problems.
+P21: He also needs a good flow of electricity to the speaker.
+People remember inferences made while reading a passage.
+
+Memory Concepts
+
+Implications for learning
+• Learning comes from processing
+information perceived or stored
+in long-term memory
+• Processing information is
+managed by the working memory
+
+Working memory is limited
+
+Who is the grandmother of
+Gloria?
+
+Who is the cousin of Nicolas?
+
+Who is the grandmother of
+Donald?
+
+Who is the brother of Christine’s
+grandfather?
+
+Cognitive Overload
+
+Learning comes from processing information perceived or
+stored in long-term memory
+Processing information is managed by the working memory
+
+If cognitive overload, processing will fail, hence no learning
+If no processing, no cognitive load but no learning
+
+Intrinsic Cognitive Load: some things are
+harder to learn
+Extraneous Cognitive Load: due to bad
+design
+
+Germane Cognitive Load: the effort to
+create schemas
+
+Intrinsic
+Extraneous
+Germane
+The task itself is
+demanding
+Added difficulty
+that is irrelevant
+to the goal
+
+Productive effort that
+supports learning and
+skill development
+
+Reduce extraneous load
+
+Split Attention Effect
+
+Manage intrinsic load
+
+Take-Aways for instruction
+1
+
+Reduce extraneous load
+Avoid unnecessary processing
+
+2
+
+Manage intrinsic load
+Make necessary complexity manageable
+
+3
+
+Create productive effort
+Engage learners in processing that builds knowledge and skills
+
+

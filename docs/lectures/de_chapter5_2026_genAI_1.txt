@@ -1,0 +1,231 @@
+Chapter 5: AI in Education
+
+Digital Education (CS-411)
+October 5, 2026
+
+Toolbox of learning mechanisms
+?
+
+?
+
+?
+
+?
+
+?
+
+?
+
+?
+
+?
+
+How can AI support these mechanisms?
+
+AI in education ≠ AI tutoring
+
+AI is not a learning mechanism
+
+History of AI in education
+1960
+
+1980
+
+1990
+
+2010
+
+2020
+
+Computer-Assisted Instruction (CAI)
+Intelligent Tutoring Systems (ITS)
+Conversational Tutoring Systems (CTS)
+Learning Analytics (LA)
+
+Cognitive Tutor
+
+PLATO
+
+Andes
+
+AutoTutor
+
+Squirrel AI
+
+Khanmigo
+
+Static Branching
+
+Symbolic Adaptivity
+
+Machine Learning
+
+Deep Learning
+
+Generative AI
+
+CAI
+
+The PLATO Project
+
+• Programmed Logic for Automatic Teaching Operations
+
+Bitzer, D.L., Lyman, E.R., & Easley, J.A. (1965). The Uses Of Plato: A Computer Controlled Teaching System.
+
+ITS
+
+Symbolic Adaptivity: Andes
+Observe
+
+Model
+
+Intervene
+
+User Input
+
+• Model Tracing:
+Expert Rules
+• Buggy Library:
+Misconceptions
+
+Correct: green
+Wrong: red
+→ Hint or
+remediation for
+misconception
+
+Buggy Model
+
+Schulze, K. G., Shelby, R. N., Treacy, D. J., Wintersgill, M. C., VanLehn, K., & Gertner, A. (2000). Andes: An Intelligent Tutor for
+Classical Physics. Journal of Electronic Publishing, 6(1)
+
+ITS
+
+Probabilistic Model: Cognitive Tutor
+• Domain Model: skills for math
+word problem-solving
+• Student Model: probabilistic
+model
+• Pedagogical model: mastery
+learning, advance when skill is
+learned
+
+Anderson, J. R., Corbett, A. T., Koedinger, K. R., & Pelletier, Ray. (1995). Cognitive Tutors: Lessons Learned. Journal of the
+Learning Sciences, 4(2), 167–207.
+
+CTS
+
+ML-Based: AutoTutor
+
+A. C. Graesser, S. Lu, G. Tanner Jackson, H. H. Mitchell, M. Ventura, A. Olney & Max M. Louwerse (2004). AutoTutor: A
+tutor with dialogue in natural language. Behavior Research Methods, Instruments, & Computers 36, 180–192
+
+LA
+
+Definition
+
+Learning analytics is the collection, analysis, interpretation and
+communication of data about learners and their learning that
+provides theoretically relevant and actionable insights to
+enhance learning and teaching.
+
+LA
+
+Student-Facing Dashboard: TeamTeachingViz
+
+R. Alfredo, P. Mejia-Domenzain, V. Echeverria, D. Rahayu, L. Zhao, H. Alajlan,
+Z.Swiecki, T. Käser, D. Gašević, and R. Martinez-Maldonado (2025). TeamTeachingViz:
+Benefits, Challenges, and Ethical Considerations of Using a Multimodal Analytics
+Dashboard to Support Team Teaching Reflection. Proceedings of LAK
+
+What can AI do to support learning?
+
+REFINE – Interactive feedback
+
+REFINE: Real-World Exploration of Interactive Feedback and Student Behaviour, Fawzi, Neshaei, Knezevic, Nazaretsky, Käser, AIED 2026
+
+PharmaSim – Supporting diagnostic reasoning
+
+Güres, F. B., Nazaretsky, T., Neshaei, S. P., & Käser, T. (2026). Structuring versus Problematizing: How LLM-based Agents Scaffold
+Learning in Diagnostic Reasoning, Proc. LAK, https://doi.org/10.1145/3785022.3785105
+
+Scaffolding
+Core idea:
+Learners receive temporary support that enables them to engage in a task
+they could not yet manage independently.
+Why it works:
+Scaffolding makes complex tasks manageable while keeping learners actively
+engaged in the learning process. Support can be adjusted as learners develop
+greater competence.
+Two forms:
+Structuring: helps learners manage complexity, focus attention, and organize
+the task.
+Problematizing: prompts learners to articulate their thinking, notice gaps, and
+reconsider their reasoning.
+
+PharmaSim – Supporting diagnostic reasoning
+
+Güres, F. B., Nazaretsky, T., Neshaei, S. P., & Käser, T. (2026). Structuring versus Problematizing: How LLM-based Agents Scaffold
+Learning in Diagnostic Reasoning, Proc. LAK, https://doi.org/10.1145/3785022.3785105
+
+Relex – Supporting procedural writing
+
+F
+3
+F
+1
+WORKED EXAMPLE
+Mejia-Domenzain, P., Frej, J., Neshaei, S. P., Mouchel, L., Nazaretsky, T., Wambsganss, T., Bosselut, A., & Käser, T. (2025).
+Enhancing Procedural Writing Through Personalized Example Retrieval: A Case Study on Cooking Recipes. IJAIED
+
+SELF-EXPLANATION
+
+Gelex – Supporting procedural writing
+
+Get improved recipe
+
+WORKED EXAMPLE
+SELF-EXPLANATION
+Yazici, A., Mejia-Domenzain, P., Frej, J., & Käser, T. (2026). GELEX: Generative AI-Hybrid System for Example-Based Learning, CHI EA
+
+Relex – Results
+
+Mejia-Domenzain, P., Frej, J., Neshaei, S. P., Mouchel, L., Nazaretsky, T., Wambsganss, T., Bosselut, A., & Käser, T. (2025).
+Enhancing Procedural Writing Through Personalized Example Retrieval: A Case Study on Cooking Recipes. IJAIED
+
+Gelex – Results
+
+Yazici, A., Mejia-Domenzain, P., Frej, J., & Käser, T. (2026). GELEX: Generative AI-Hybrid System for Example-Based Learning, CHI EA
+
+Explique
+TEACHING
+
+Wang, C., Petrie, C., Stouras, M., Ettlin, N., George, A., Mejia-Domenzain, P., Swamy, V., Käser, T., & Svensson, O. (2026). Turning 500+ Students
+into Teachers: A Semester-Long Study of an AI Teachable Agent in an Undergraduate Algorithms Course.
+
+Teaching
+Core mechanism:
+Teaching improves the teacher’s own knowledge.
+Why it works:
+Teaching requires learners to retrieve, organize, and explain their knowledge.
+Questions from the learner can expose gaps and prompt further elaboration.
+Example:
+Two learners take turns teaching each other a concept they have just learned.
+
+AI can support learning mechanisms
+
+Design an AI-supported learning activity
+1) Take one learning activity already planned for your project
+Identify the learning objective and intended learning mechanism(s).
+
+2) Design or prototype AI support
+Choose what AI should GENERATE, ANALYZE, ADAPT, or INTERACT with.
+Design the interaction or build a small proof of concept.
+
+3) Experience each other’s designs
+What is the learner supposed to do?
+Which learning mechanism do you experience?
+What is the AI doing?
+Is AI supporting the learner's productive effort—or replacing it?
+
+

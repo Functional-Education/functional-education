@@ -1,0 +1,318 @@
+Chapter 3: Learning through exploration
+
+Digital Education (CS-411)
+September 22, 2026
+
+From memory to learning
+• Learning comes from processing
+information perceived or stored
+in long-term memory
+• Processing information is
+managed by the working memory
+
+Working memory taps into long-term memory
+
+Learning fractions
+
+https://gomaths.edu-vd.ch/cf_mix.php
+
+https://www.visnos.com/demos/fraction-wall
+
+Stages of development
+Jean Piaget
+
+https://www.youtube.com/watch?v=TRF27F2bn-A
+
+Constructivism
+Jean Piaget
+
+Individuals actively build knowledge from their experiences and
+interactions with the environment rather than passively
+absorbing information
+Schema: The basic building blocks of knowledge or mental models
+used to understand the world.
+
+Assimilation: Fitting new information into an existing schema.
+Accommodation: Changing an existing schema or creating a new one
+when new information does not fit old ideas.
+
+Schema
+
+Assimilation
+
+Cognitive Conflict
+
+Accommodation
+
+Cognitive conflict as a key learning mechanism
+• Learning from experience
+• Learning by doing
+• Discovery learning
+
+Explore the simulation. Try to figure out how the system works.
+
+https://phet.colorado.edu/sims/html/beers-law-lab/latest/beers-law-lab_all.html
+
+How can we design activities in
+which students actively
+construct knowledge?
+
+From exploration to consolidation
+Exploration
+•
+•
+•
+•
+•
+•
+
+look at experimental results
+compare different conditions
+notice patterns / differences
+try to explain what happened
+make predictions / hypotheses
+discuss interpretations
+
+Consolidation
+• introduce theoretical
+concepts
+• relate the concepts to
+the observed patterns
+
+There is a time for telling
+
+Just-in-time Telling
+Core learning mechanism:
+Students explore a problem or phenomenon before receiving the relevant
+explanation.
+Why it works:
+People learn from expository materials by integrating the explanations with
+their prior knowledge. But learners may not have sufficient prior knowledge to
+do this meaningfully. Exploring the problem first helps develop the knowledge
+that makes the subsequent explanation meaningful.
+Example:
+Exploring the doctor visit and balloon passage experiments before learning the
+underlying memory concepts.
+
+Example: Just-in-time Telling
+
+Schwartz, D. L., & Bransford, J. D. (1998). A time for telling. Cognition and Instruction, 16(4), 475–522.
+
+Example: Just-in-time Telling
+
+Schwartz, D. L., & Bransford, J. D. (1998). A time for telling. Cognition and Instruction, 16(4), 475–522.
+
+Who is the most consistent striker?
+
+Kapur, M. (2012). Productive failure in learning the concept of variance. Instructional Science, 40, 651–672.
+
+None of the groups discovered the
+canonical formula.
+
+Productive Failure
+
+Kapur, M. (2012). Productive failure in learning the concept of variance. Instructional Science, 40, 651–672.
+
+From exploration to consolidation
+Exploration
+
+Consolidation
+
+There is a time for telling
+Productive Failure
+Attempting (and failing) to generate solutions can prepare
+students to learn from subsequent instruction.
+
+From exploration to consolidation
+Exploration
+
+Consolidation
+
+There is a time for telling
+
+How to guide learners?
+
+Guiding learners during exploration
+Exploration
+• Carefully design the materials
+
+Consolidation
+
+What is a Splountz?
+
+Is this a Splountz?
+
+Yes
+
+No
+
+No
+
+What is a SPUC?
+
+Contrasting Cases
+Core learning mechanism:
+Comparing examples that differ in important ways helps learners notice which
+features and relationships matter.
+Why it works:
+People learn patterns in sensation by discerning what makes one thing
+different from another. Contrasting cases juxtapose “near misses” to help
+students pick out distinctive features.
+Example:
+The positive, negative, and near miss examples from the SPUC.
+The different experiment examples in the doctor visit and balloon passage.
+
+Guiding learners during exploration
+Exploration
+• Carefully design the materials
+• Comparisons, playing with differences
+
+Consolidation
+
+Which ice cube melts faster?
+
+2 ice cubes, room temperature 20℃
+
+Misconception
+
+Which is more probable?
+Linda is thirty-one years old, single, outspoken, and very bright.
+She majored in philosophy. As a student, she was deeply
+concerned with issues of discrimination and social justice, and she
+also participated in antinuclear demonstrations. Which is more
+probable:
+a) Linda is a bank teller.
+b) Linda is a bank teller and is active in the feminist movement.
+Tversky, A., & Kahneman, D. (1983). Extensional versus intuitive reasoning: The conjunction
+fallacy in probability judgment. Psychological Review, 90(4), 293–315.
+
+Heuristic
+
+Undoing
+Core learning mechanism:
+Undoing is the process of identifying and replacing misconceptions and faulty
+methods of reasoning.
+Why it works:
+Misconceptions and faulty reasoning can become entrenched and difficult to
+detect. Undoing identifies the underlying problem and strengthens a
+competing mental representation that can replace the erroneous one.
+Example:
+Ask learners to make a prediction on a task designed to reveal a common
+misconception.
+
+Guiding learners during exploration
+Exploration
+• Carefully design the materials
+• Comparisons, playing with differences
+• Conflict: trapping predictions
+
+Consolidation
+
+Guiding learners during exploration
+Exploration
+• Carefully design the materials
+• Comparisons, playing with differences
+• Conflict: trapping predictions
+• Push reflection
+
+Consolidation
+
+Chevalier, M., Giang, C., Piatti, A., & Mondada, F. (2020). Fostering computational thinking through educational robotics: A
+model for creative computational problem solving. International Journal of STEM Education, 7, 39.
+
+Chevalier, M., Giang, C., Piatti, A., & Mondada, F. (2020). Fostering computational thinking through educational robotics: A
+model for creative computational problem solving. International Journal of STEM Education, 7, 39.
+
+Remember the balloon passage?
+You will see two experiments investigating people's
+memory for a passage. For each experiment, identify
+patterns you find interesting or surprising. Compare
+across experiments when useful. Find a way to
+summarize or visualize the most important patterns. For
+each pattern, identify the evidence in the data and try to
+explain why it might occur.
+
+Self-Explanation
+Core learning mechanism:
+Learners explain new information to themselves rather than simply trying to
+remember it.
+Why it works:
+Explanations cannot state every relevant connection between ideas. Selfexplanation prompts learners to fill in missing information and connections,
+constructing a coherent understanding that goes beyond memorization.
+Example:
+Explaining why the patterns in the Balloon Passage experiments might occur.
+
+Guiding learners during exploration
+Exploration
+• Carefully design the materials
+• Comparisons, playing with differences
+• Conflict: trapping predictions
+• Push reflection
+
+Consolidation
+
+How can we use technology to
+guide learners during
+exploration?
+
+Exploration is not necessarily systematic
+• Changing several variables at
+once
+• Changing values without making
+systematic comparisons
+• Exploring one variable at a time,
+but not how variables combine
+
+Using AI to support the exploration
+
+Shved, E., Bumbacher, E., Neshaei, S. P., & Käser, T. (2026). Teaching Multivariational Reasoning through
+AI-Guided Inquiry in Interactive Simulations, AIED.
+
+How does it work?
+
+One variable at a time
+1.Width ×2
+2.Width ÷3
+3.Concentration ÷2
+4.Concentration ×3
+
+Combining variables
+5. Width ×2 + concentration ×2
+6. Width ×3 + concentration ×3
+7. Width ×3 + concentration ÷3
+
+Shved, E., Bumbacher, E., Neshaei, S. P., & Käser, T. (2026). Teaching Multivariational Reasoning through
+AI-Guided Inquiry in Interactive Simulations, AIED.
+
+Guiding learners during exploration
+Exploration
+
+Consolidation
+
+• Carefully design the materials: Sequence of experiments
+• Comparisons, playing with differences: systematic variation of width and
+concentration
+• Conflict: trapping predictions: hypothesis before experimentation
+• Push reflection: interpretation prompts after observing the data
+
+Take-Aways for instruction
+1
+
+Knowledge construction
+Learning requires learners to actively build and adapt their mental
+representations.
+
+2 Explorative learning ≠ Leaving the learner alone
+3
+
+There is a time for telling
+Exploration can prepare learners to benefit from subsequent
+instruction.
+
+4
+
+Learning mechanisms guide exploration
+Design materials and activities to promote comparison, conflict, and
+reflection.
+
+
