@@ -8,6 +8,7 @@ const exercises = [
     problem: 'Write a recursive function that returns the sum of all numbers from 0 to n. Assume n is a whole number greater than or equal to 0.',
     goal: 'Identify the base case, reduce the input by 1, and combine the current value with the recursive result.',
     functionText: 'function sum(n):',
+    traceCall: 'sum(3)',
     blocks: [
       { id: 'if', type: 'if', text: 'if n == 0:' },
       { id: 'return-base', type: 'return', text: 'return 0' },
@@ -17,7 +18,8 @@ const exercises = [
       { id: 'bait-3', type: 'call', text: 'sum(n + 1)' },
       { id: 'bait-4', type: 'return', text: 'return sum(n - 1)' },
       { id: 'bait-5', type: 'call', text: 'return n + sum(n + 1)' },
-      { id: 'bait-6', type: 'bait', text: 'if n == 1:' }
+      { id: 'bait-6', type: 'bait', text: 'if n == 1:' },
+      { id: 'bait-7', type: 'bait', text: 'n = n - 1' }
     ],
     hint: 'Start from the theory example: the base case return goes inside the if-block, and the recursive return stays outside it.',
     successMessage: 'Correct! The base case is nested inside the if-block, and the recursive step stays at the same level as the condition.',
@@ -32,6 +34,7 @@ const exercises = [
     problem: 'Write a recursive function that returns the nth Fibonacci number. Assume n is 0 or a positive whole number. The Fibonacci sequence starts 0, 1, 1, 2, 3, 5, so fibonacci(0) = 0 and fibonacci(1) = 1.',
     goal: 'Use a small base case for the first Fibonacci values, then combine two smaller recursive calls.',
     functionText: 'function fibonacci(n):',
+    traceCall: 'fibonacci(4)',
     blocks: [
       { id: 'if', type: 'if', text: 'if n <= 1:' },
       { id: 'return-base', type: 'return', text: 'return n' },
@@ -41,7 +44,8 @@ const exercises = [
       { id: 'bait-3', type: 'call', text: 'return fibonacci(n - 1)' },
       { id: 'bait-4', type: 'call', text: 'return fibonacci(n - 1) + fibonacci(n - 1)' },
       { id: 'bait-5', type: 'bait', text: 'if n < 1:' },
-      { id: 'bait-6', type: 'call', text: 'return fibonacci(n - 2)' }
+      { id: 'bait-6', type: 'call', text: 'return fibonacci(n - 2)' },
+      { id: 'bait-7', type: 'bait', text: 'n = n - 1' }
     ],
     hint: 'The base case should handle the smallest Fibonacci inputs, and the recursive return should combine two smaller Fibonacci calls.',
     successMessage: 'Correct! The base case handles the smallest values, and the recursive step combines two smaller Fibonacci calls.',
@@ -56,6 +60,7 @@ const exercises = [
     problem: 'Write a recursive function that returns a reversed version of a string. Assume text can be empty. In this exercise, first(text) means the first character, and rest(text) means everything except the first character.',
     goal: 'Use the empty string as the base case, then reverse the rest of the text and place the first character at the end.',
     functionText: 'function reverse(text):',
+    traceCall: 'reverse("abc")',
     blocks: [
       { id: 'if', type: 'if', text: 'if text == "":' },
       { id: 'return-base', type: 'return', text: 'return ""' },
@@ -65,7 +70,8 @@ const exercises = [
       { id: 'bait-3', type: 'call', text: 'return first(text) + reverse(rest(text))' },
       { id: 'bait-4', type: 'call', text: 'return reverse(first(text)) + rest(text)' },
       { id: 'bait-5', type: 'return', text: 'return text' },
-      { id: 'bait-6', type: 'bait', text: 'if text == "ab":' }
+      { id: 'bait-6', type: 'bait', text: 'if text == "ab":' },
+      { id: 'bait-7', type: 'bait', text: 'text = rest(text)' }
     ],
     hint: 'Think of the smallest string first. Then recurse on the rest of the text and add the current first character at the end.',
     successMessage: 'Correct! The function stops on the empty string and rebuilds the text in reverse order.',
@@ -80,6 +86,7 @@ const exercises = [
     problem: 'Write a recursive function that returns true when a word is a palindrome. A palindrome is a word that reads the same forwards and backwards, like level. Assume the input is a single word. In this exercise, first(word) is the first letter, last(word) is the last letter, and middle(word) is the part between them.',
     goal: 'Use a very short word as the base case, then compare the first and last letters while recurring on the middle part.',
     functionText: 'function isPalindrome(word):',
+    traceCall: 'isPalindrome("level")',
     blocks: [
       { id: 'if', type: 'if', text: 'if length(word) <= 1:' },
       { id: 'return-base', type: 'return', text: 'return true' },
@@ -89,7 +96,8 @@ const exercises = [
       { id: 'bait-3', type: 'call', text: 'return isPalindrome(word)' },
       { id: 'bait-4', type: 'call', text: 'return first(word) == last(word)' },
       { id: 'bait-5', type: 'bait', text: 'if length(word) == 2:' },
-      { id: 'bait-6', type: 'call', text: 'return first(word) != last(word) and isPalindrome(middle(word))' }
+      { id: 'bait-6', type: 'call', text: 'return first(word) != last(word) and isPalindrome(middle(word))' },
+      { id: 'bait-7', type: 'bait', text: 'word = middle(word)' }
     ],
     hint: 'If the word is very short, it is already a palindrome. Otherwise compare the outside letters and recurse on the middle.',
     successMessage: 'Correct! The function stops on very short words and then checks matching ends while recurring on the middle.',
@@ -115,6 +123,17 @@ const exerciseInstruction = document.getElementById('exercise-instruction');
 const problemText = document.getElementById('problem-text');
 const goalText = document.getElementById('goal-text');
 const exerciseSelector = document.getElementById('exercise-selector');
+const treePanel = document.getElementById('tree-panel');
+const treeCaption = document.getElementById('tree-caption');
+const treeView = document.getElementById('tree-view');
+const treeComment = document.getElementById('tree-comment');
+
+const IS_AI_VERSION = new URLSearchParams(window.location.search).get('version') === 'ai';
+const treeCache = new Map();
+let treeRequestId = 0;
+
+document.body.classList.add(IS_AI_VERSION ? 'version-ai' : 'version-control');
+document.getElementById('condition-label').textContent = IS_AI_VERSION ? 'AI version' : 'Control version';
 
 function getCurrentExercise() {
   return exercises[currentExerciseIndex];
@@ -267,6 +286,7 @@ function renderExerciseSelector() {
       renderBlocks();
       renderAnswerZone();
       hideFeedback();
+      hideTreePanel();
     });
     exerciseSelector.appendChild(button);
   });
@@ -444,16 +464,89 @@ function launchConfetti() {
   }, 5200);
 }
 
+function serializeSolution() {
+  const lines = [getFunctionNode().text];
+
+  const appendLines = (entries, depth) => {
+    entries.forEach((entry) => {
+      lines.push(`${'    '.repeat(depth)}${getBlockById(entry.id).text}`);
+      appendLines(entry.children, depth + 1);
+    });
+  };
+
+  appendLines(getFunctionNode().children, 1);
+  return lines.join('\n');
+}
+
+function hideTreePanel() {
+  treeRequestId += 1;
+  treePanel.classList.add('hidden');
+}
+
+function showTreeResult(exercise, tree) {
+  treeCaption.textContent = tree.terminates
+    ? `How your function runs for ${exercise.traceCall}. Result: ${tree.final_result}`
+    : `How your function runs for ${exercise.traceCall}. It never returns a result.`;
+  treeView.textContent = window.RecursionTree.render(tree.nodes);
+  treeComment.textContent = tree.comment;
+  treeView.classList.remove('hidden');
+  treeComment.classList.remove('hidden');
+  treePanel.classList.remove('loading');
+}
+
+async function showRecursionTree(isCorrect) {
+  const exercise = getCurrentExercise();
+  const code = serializeSolution();
+  const cacheKey = `${exercise.id}\n${code}`;
+  const requestId = ++treeRequestId;
+
+  treePanel.classList.remove('hidden');
+  treeView.classList.add('hidden');
+  treeComment.classList.add('hidden');
+
+  if (treeCache.has(cacheKey)) {
+    showTreeResult(exercise, treeCache.get(cacheKey));
+    return;
+  }
+
+  treePanel.classList.add('loading');
+  treeCaption.textContent = `Generating the recursion tree of your solution for ${exercise.traceCall}…`;
+
+  try {
+    const tree = await window.RecursionTree.generate({
+      problem: exercise.problem,
+      code,
+      traceCall: exercise.traceCall,
+      isCorrect
+    });
+    treeCache.set(cacheKey, tree);
+    if (requestId === treeRequestId) showTreeResult(exercise, tree);
+  } catch (error) {
+    if (requestId !== treeRequestId) return;
+    treePanel.classList.remove('loading');
+    treeCaption.textContent = error instanceof window.RecursionTree.TreeGenerationError
+      ? error.message
+      : 'The recursion tree could not be generated. Try checking your answer again.';
+    console.error(error);
+  }
+}
+
 function checkAnswer() {
   ensureFunctionRoot();
   const exercise = getCurrentExercise();
 
-  if (selectedOrder.length === 0) {
+  if (getFunctionNode().children.length === 0) {
     showFeedback('Start by choosing some blocks for the function.', 'error');
+    hideTreePanel();
     return;
   }
 
-  if (isCorrectSolution()) {
+  const isCorrect = isCorrectSolution();
+  if (IS_AI_VERSION) {
+    showRecursionTree(isCorrect);
+  }
+
+  if (isCorrect) {
     const wasCompleted = completedExercises.has(exercise.id);
     completedExercises.add(exercise.id);
     renderExerciseSelector();
@@ -474,6 +567,7 @@ function resetActivity() {
   renderBlocks();
   renderAnswerZone();
   hideFeedback();
+  hideTreePanel();
 }
 
 function showHint() {
@@ -503,6 +597,7 @@ answerZone.addEventListener('drop', (event) => {
 
 checkBtn.addEventListener('click', checkAnswer);
 resetBtn.addEventListener('click', resetActivity);
+
 
 selectedOrder = [createFunctionNode()];
 resetBlockOrder();

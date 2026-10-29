@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Functional Education</title>
-    <link rel="stylesheet" href="styles.css?v=M3.10.06b" />
+    <link rel="stylesheet" href="styles.css?v=M4.10.29" />
   </head>
   <body>
     <header class="topbar">
@@ -12,19 +12,22 @@
         <div class="brand">Functional Education</div>
         <nav>
           <a href="#intro">Intro</a>
-          <a href="#concepts">Concepts</a>
+          <a href="#theory">Theory</a>
+          <a href="#functional-style">Functional style</a>
+          <a href="#trees" data-condition="ai">Recursion trees</a>
           <a href="#activity">Activity</a>
+          <a href="#reflection">Reflection</a>
         </nav>
       </div>
       <div class="container version-wrap">
-        <p class="version-stamp">Version: M3.10.06b</p>
+        <p class="version-stamp">Version: M4.10.29 · <span id="condition-label">Control</span></p>
       </div>
     </header>
 
     <main class="container">
       <section id="intro" class="hero">
         <div>
-          <p class="eyebrow">Milestone 3 prototype</p>
+          <p class="eyebrow">Milestone 4 prototype</p>
           <h1>Recursive thinking with functional blocks</h1>
           <p class="subtitle">
             Learn the basics of recursive functions without mutable data by assembling
@@ -59,10 +62,11 @@
         </article>
       </section>
 
-      <section class="lesson-box">
+      <section id="theory" class="lesson-box">
+        <p class="eyebrow">Step 1</p>
         <h2>Mini theory</h2>
         <p>
-          In this exercise, you are not just putting blocks in the right order. You are
+          In the exercises, you are not just putting blocks in the right order. You are
           building the shape of a recursive function. A correct answer needs the right
           idea and the right indentation.
         </p>
@@ -88,9 +92,9 @@
           <div class="theory-step">
             <span>3</span>
             <p>
-              The system works like code. Click a block to add it to the function. Drop a
-              block onto another block to nest it underneath. Use the <strong>x</strong> to
-              remove a block and put it back in the list.
+              Make sure it terminates. Every recursive call must move the input closer to
+              the base case. If it moves away (for example <strong>n + 1</strong>), the
+              function never stops.
             </p>
           </div>
         </div>
@@ -110,12 +114,113 @@
         </div>
       </section>
 
+      <section id="functional-style" class="lesson-box">
+        <p class="eyebrow">Step 2</p>
+        <h2>With or without mutation?</h2>
+        <p>
+          Both functions below compute the same sum. Only one of them follows the idioms of
+          functional programming. Compare how each one gets to the answer.
+        </p>
+
+        <div class="comparison">
+          <div class="comparison-item comparison-bad">
+            <h3>Iterative, with mutation</h3>
+            <pre class="theory-code"><code>function sum(n):
+    total = 0
+    i = 1
+    while i &lt;= n:
+        total = total + i
+        i = i + 1
+    return total</code></pre>
+            <p>
+              The variables <strong>total</strong> and <strong>i</strong> are changed at every
+              step of the loop. To know what the function returns, you have to follow how
+              their values change over time.
+            </p>
+          </div>
+
+          <div class="comparison-item comparison-good">
+            <h3>Recursive, without mutation</h3>
+            <pre class="theory-code"><code>function sum(n):
+    if n == 0:
+        return 0
+    return n + sum(n - 1)</code></pre>
+            <p>
+              No variable is ever changed. Each call gets its own value of <strong>n</strong>,
+              and the result is built by combining <strong>n</strong> with the value returned
+              by the smaller call.
+            </p>
+          </div>
+        </div>
+
+        <p class="takeaway">
+          <strong>Takeaway:</strong> in the exercises, blocks such as <strong>n = n - 1</strong>
+          change a variable. A functional solution never needs them: pass the smaller value
+          directly to the recursive call instead.
+        </p>
+      </section>
+
+      <section id="trees" class="lesson-box" data-condition="ai">
+        <p class="eyebrow">Step 3</p>
+        <h2>Reading a recursion tree</h2>
+        <p>
+          A recursion tree shows every call a recursive function makes. The first call is at
+          the top. Each call it makes appears one level below it. Reading it
+          <strong>downwards</strong> shows how the input gets smaller until the base case.
+          Reading it <strong>upwards</strong> shows how the returned values are combined into
+          the final answer.
+        </p>
+
+        <div class="comparison">
+          <div class="comparison-item comparison-good">
+            <h3>A function that terminates</h3>
+            <pre class="tree-view">sum(3) → 3 + 3 = 6
+└── sum(2) → 2 + 1 = 3
+    └── sum(1) → 1 + 0 = 1
+        └── sum(0) → 0   (base case)</pre>
+            <p>
+              The input goes 3, 2, 1, 0, so it reaches the base case. Then the values go back
+              up: 0, then 1 + 0, then 2 + 1, and finally 3 + 3 = 6.
+            </p>
+          </div>
+
+          <div class="comparison-item comparison-bad">
+            <h3>A function that never stops</h3>
+            <pre class="tree-view">sum(3) → ?
+└── sum(4) → ?
+    └── sum(5) → ?
+        └── sum(6) → ?
+            └── … never reaches a base case ✗</pre>
+            <p>
+              Here the recursive call is <strong>sum(n + 1)</strong>. The input grows instead of
+              shrinking, so <strong>n == 0</strong> is never true and no call ever returns.
+            </p>
+          </div>
+        </div>
+
+        <p class="takeaway">
+          When a function calls itself more than once, like Fibonacci, each call has several
+          children and the tree branches. In the activity, an AI-generated recursion tree of
+          <strong>your own solution</strong> appears every time you check your answer, with a
+          short comment on what happens in it.
+        </p>
+      </section>
+
       <section id="activity" class="exercise">
         <div class="exercise-header">
           <div>
             <p class="eyebrow">Main learning activity</p>
             <h2 id="exercise-title">Build the recursive solution</h2>
           </div>
+        </div>
+
+        <div class="how-to">
+          <strong>How the blocks work:</strong> click a block to add it to the function. Drop a
+          block onto another block to nest it underneath. Use the <strong>×</strong> to remove a
+          block and put it back in the list.
+          <span data-condition="ai">
+            When you check your answer, a recursion tree shows how your function actually runs.
+          </span>
         </div>
 
         <div id="exercise-selector" class="exercise-selector" aria-label="Exercise selector"></div>
@@ -155,9 +260,65 @@
         </div>
 
         <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+
+        <div id="tree-panel" class="tree-panel hidden" data-condition="ai" aria-live="polite">
+          <div class="tree-panel-header">
+            <h3>Recursion tree of your solution</h3>
+            <span class="ai-badge">AI-generated</span>
+          </div>
+          <p id="tree-caption" class="tree-caption"></p>
+          <pre id="tree-view" class="tree-view hidden"></pre>
+          <p id="tree-comment" class="tree-comment hidden"></p>
+        </div>
+      </section>
+
+      <section id="reflection" class="lesson-box">
+        <p class="eyebrow">Final step</p>
+        <h2>Reflection</h2>
+        <p>
+          Look back at the four functions you built. Think about each question before you open
+          the answer.
+        </p>
+
+        <details class="reflection-item">
+          <summary>What do all the base cases have in common?</summary>
+          <p>
+            Each one handles the smallest input, where the answer is known without any further
+            call: <strong>n == 0</strong>, <strong>n &lt;= 1</strong>, the empty string, or a word of
+            length 0 or 1. It is the only place where the recursion stops.
+          </p>
+        </details>
+
+        <details class="reflection-item">
+          <summary>How does each recursive call make progress?</summary>
+          <p>
+            The input always gets strictly smaller: <strong>n - 1</strong>, <strong>n - 2</strong>,
+            <strong>rest(text)</strong>, <strong>middle(word)</strong>. Because it shrinks at every
+            call, it is guaranteed to reach the base case.
+          </p>
+        </details>
+
+        <details class="reflection-item">
+          <summary>Where did the correct solutions use mutation?</summary>
+          <p>
+            Nowhere. No variable is ever reassigned. Each result is built by combining the
+            current value with what the smaller call returns, using <strong>+</strong> or
+            <strong>and</strong>.
+          </p>
+        </details>
+
+        <details class="reflection-item" data-condition="ai">
+          <summary>What did the recursion trees show you?</summary>
+          <p>
+            Going down the tree, the input gets smaller until a leaf, which is always a base
+            case. Going up, each call combines the results of its children. A tree that never
+            reaches a leaf means the calls are not making progress towards the base case.
+          </p>
+        </details>
       </section>
     </main>
 
-    <script src="script.js?v=M3.10.06b"></script>
+    <script src="recursion-tree.js?v=M4.10.29"></script>
+    <script src="script.js?v=M4.10.29"></script>
   </body>
 </html>
