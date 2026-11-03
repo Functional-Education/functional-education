@@ -15,4 +15,4 @@ preview_urls = false
 [[d1_databases]]
 binding = "DB"
 database_name = "functional-education-study"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "153dcaaa-1f2a-4b54-8451-2a10add4e418"
