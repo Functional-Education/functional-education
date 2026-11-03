@@ -139,6 +139,69 @@ function getCurrentExercise() {
   return exercises[currentExerciseIndex];
 }
 
+function getLearningStateSnapshot() {
+  return {
+    currentExerciseIndex,
+    selectedOrder: JSON.parse(JSON.stringify(selectedOrder)),
+    completedExerciseIds: [...completedExercises],
+    currentBlockOrder: [...currentBlockOrder],
+    hasCelebratedAllExercises
+  };
+}
+
+function persistLearningState() {
+  if (window.StudySession && window.StudySession.isActive()) {
+    window.StudySession.saveLearningState(getLearningStateSnapshot());
+  }
+}
+
+function restoreLearningState(state) {
+  if (!state || typeof state !== 'object') return;
+
+  const requestedIndex = Number.isInteger(state.currentExerciseIndex)
+    ? state.currentExerciseIndex
+    : 0;
+  currentExerciseIndex = Math.min(Math.max(requestedIndex, 0), exercises.length - 1);
+
+  const validBlockIds = new Set(exercises[currentExerciseIndex].blocks.map((block) => block.id));
+  const restoredTree = Array.isArray(state.selectedOrder) ? state.selectedOrder : [];
+  const restoredChildren = restoredTree[0] && Array.isArray(restoredTree[0].children)
+    ? restoredTree[0].children
+    : [];
+
+  function sanitizeNodes(nodes) {
+    return nodes
+      .filter((node) => node && validBlockIds.has(node.id))
+      .map((node) => ({
+        id: node.id,
+        children: sanitizeNodes(Array.isArray(node.children) ? node.children : [])
+      }));
+  }
+
+  selectedOrder = [{
+    id: 'function',
+    type: 'function',
+    text: getCurrentExercise().functionText,
+    children: sanitizeNodes(restoredChildren)
+  }];
+
+  completedExercises.clear();
+  (Array.isArray(state.completedExerciseIds) ? state.completedExerciseIds : [])
+    .filter((id) => exercises.some((exercise) => exercise.id === id))
+    .forEach((id) => completedExercises.add(id));
+
+  currentBlockOrder = Array.isArray(state.currentBlockOrder)
+    ? state.currentBlockOrder.filter((id) => validBlockIds.has(id))
+    : [];
+  hasCelebratedAllExercises = Boolean(state.hasCelebratedAllExercises);
+
+  renderExerciseContent();
+  renderBlocks();
+  renderAnswerZone();
+  hideFeedback();
+  hideTreePanel();
+}
+
 function createFunctionNode() {
   return {
     id: 'function',
@@ -233,6 +296,7 @@ function addBlockToAnswer(blockId, parentId = null) {
   renderBlocks();
   renderAnswerZone();
   showFeedback('Block added to the function. Drop it onto a block to nest it under it.', 'info');
+  persistLearningState();
 }
 
 function removeBlockById(list, blockId) {
@@ -287,6 +351,7 @@ function renderExerciseSelector() {
       renderAnswerZone();
       hideFeedback();
       hideTreePanel();
+      persistLearningState();
     });
     exerciseSelector.appendChild(button);
   });
@@ -394,6 +459,7 @@ function renderNode(entry, parentNode, isNested = false) {
     renderBlocks();
     renderAnswerZone();
     showFeedback('Block removed.', 'info');
+    persistLearningState();
   });
   line.appendChild(removeBtn);
 
@@ -559,6 +625,15 @@ function checkAnswer() {
   } else {
     showFeedback(`Incorrect. Hint: ${exercise.hint}`, 'error');
   }
+
+  if (window.StudySession && window.StudySession.isActive()) {
+    window.StudySession.recordEvent('lesson_exercise_checked', {
+      exerciseId: exercise.id,
+      code: serializeSolution(),
+      isCorrect
+    });
+  }
+  persistLearningState();
 }
 
 function resetActivity() {
@@ -568,6 +643,7 @@ function resetActivity() {
   renderAnswerZone();
   hideFeedback();
   hideTreePanel();
+  persistLearningState();
 }
 
 function showHint() {
@@ -608,3 +684,5 @@ renderAnswerZone();
 window.addBlockToAnswer = addBlockToAnswer;
 window.resetActivity = resetActivity;
 window.isCorrectSolution = isCorrectSolution;
+window.getLearningStateSnapshot = getLearningStateSnapshot;
+window.restoreLearningState = restoreLearningState;

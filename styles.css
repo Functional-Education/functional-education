@@ -672,3 +672,396 @@ body:not(.version-control) [data-condition="control"] {
 .reflection-item p {
   margin: 0.6rem 0 0;
 }
+
+
+/* Study session flow */
+.study-screen {
+  margin: 2rem auto;
+}
+
+.study-screen.card {
+  max-width: 760px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.study-screen h1 {
+  margin-top: 0;
+}
+
+.consent-notice {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.field-label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-weight: 700;
+}
+
+.text-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+}
+
+.consent-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.consent-check input {
+  margin-top: 0.25rem;
+}
+
+.phase-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 0 2rem;
+}
+
+.test-content {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+body.study-not-lesson .topbar nav {
+  display: none;
+}
+
+body.study-not-lesson .version-wrap {
+  display: none;
+}
+
+/* One-question-at-a-time assessment */
+.test-content {
+  color: var(--text, inherit);
+  border-style: solid;
+}
+
+.assessment-header,
+.assessment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.assessment-header {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.assessment-progress {
+  height: 8px;
+  margin: 0.8rem 0 1.6rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border, #e5e7eb);
+}
+
+.assessment-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary, #5267d8);
+  transition: width 160ms ease;
+}
+
+.assessment-question {
+  margin: 0 0 1rem;
+  color: var(--text, inherit);
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.assessment-code {
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  background: var(--panel-alt, #f6f7f9);
+  color: var(--text, #222);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+.assessment-options {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0 1.4rem;
+  padding: 0;
+  border: 0;
+}
+
+.assessment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--border, #d8dce3);
+  border-radius: 10px;
+  background: var(--panel, #fff);
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+.assessment-option:hover {
+  border-color: var(--primary, #5267d8);
+}
+
+.assessment-option.selected {
+  border-color: var(--primary, #5267d8);
+  background: var(--panel-alt, #f6f7ff);
+}
+
+.assessment-option input {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+
+.assessment-option-letter {
+  flex: 0 0 auto;
+  font-weight: 700;
+}
+
+.assessment-footer {
+  align-items: flex-end;
+  margin-top: 1.2rem;
+}
+
+.assessment-note {
+  max-width: 24rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.assessment-complete {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.assessment-complete p {
+  margin-bottom: 1.25rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .assessment-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .assessment-footer .primary-btn {
+    width: 100%;
+  }
+}
+
+
+/* Final questionnaire */
+.questionnaire-intro {
+  margin: 0 0 1.4rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.likert-item {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.likert-statement {
+  margin-bottom: 0.7rem;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.likert-scale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.likert-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.7rem 0.4rem;
+  border: 1px solid var(--border, #d8dce3);
+  border-radius: 10px;
+  background: var(--panel, #fff);
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.likert-option:hover {
+  border-color: var(--primary, #5267d8);
+}
+
+.likert-option.selected {
+  border-color: var(--primary, #5267d8);
+  background: var(--panel-alt, #f6f7ff);
+}
+
+.likert-number {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.questionnaire-open {
+  margin: 1.6rem 0;
+}
+
+.questionnaire-open-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.questionnaire-optional {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.questionnaire-hint {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.questionnaire-textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 6rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border, #d8dce3);
+  border-radius: 10px;
+  font: inherit;
+  resize: vertical;
+}
+
+.questionnaire-counter {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .likert-scale {
+    grid-template-columns: 1fr;
+  }
+
+  .likert-option {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+  }
+}
+
+/* Reassurance note on the first page */
+.study-reassurance {
+  margin: 1.2rem 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--primary, #5267d8);
+  border-radius: 12px;
+  background: var(--panel-alt, #f6f7ff);
+  line-height: 1.5;
+}
+
+.study-reassurance p {
+  margin: 0.3rem 0 0;
+}
+
+/* Participant information sheet */
+.consent-sheet-title {
+  margin: 1.4rem 0 0.6rem;
+  font-size: 1.2rem;
+}
+
+.consent-sheet {
+  max-height: 26rem;
+  overflow-y: auto;
+  padding: 0.4rem 1.2rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+  line-height: 1.55;
+}
+
+.consent-sheet h3 {
+  margin: 1.1rem 0 0.3rem;
+  font-size: 1rem;
+}
+
+.consent-sheet p,
+.consent-sheet ul,
+.consent-sheet ol {
+  margin: 0.3rem 0 0.6rem;
+}
+
+.consent-sheet ul,
+.consent-sheet ol {
+  padding-left: 1.3rem;
+}
+
+/* The AI paragraph is only shown to participants of the AI version. */
+.ai-only {
+  display: none;
+}
+
+body.version-ai .ai-only {
+  display: block;
+}
+
+/* Items that still need to be filled in by the research team. */
+.consent-todo {
+  padding: 0 0.25rem;
+  border-radius: 4px;
+  background: var(--warning-soft);
+  color: #92400e;
+  font-weight: 600;
+}
+
+.field-help {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}

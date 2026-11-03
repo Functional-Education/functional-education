@@ -4,3 +4,15 @@ compatibility_date = "2026-10-01"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 preview_urls = false
+
+# Add this binding after creating the D1 database in the Cloudflare account:
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "functional-education-study"
+# database_id = "REPLACE_WITH_THE_ID_RETURNED_BY_WRANGLER"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "functional-education-study"
+database_id = "00000000-0000-0000-0000-000000000000"

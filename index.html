@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Functional Education</title>
-    <link rel="stylesheet" href="styles.css?v=M4.10.29" />
+    <link rel="stylesheet" href="styles.css?v=questionnaire-v4" />
   </head>
   <body>
     <header class="topbar">
@@ -25,6 +25,128 @@
     </header>
 
     <main class="container">
+      <section id="consent-phase" class="study-screen card">
+        <p class="eyebrow">Study participation</p>
+        <h1>Functional Education study</h1>
+        <p>
+          Before starting, please read the participant information sheet below.
+          Do not enter your name or other directly identifying information.
+        </p>
+        <div class="study-reassurance">
+          <strong>This is not an exam.</strong>
+          <p>
+            The pretest (before the lesson) and the posttest (after the lesson) are only used in
+            our study to assess your skills before and after the course. It is completely normal
+            not to know some of the answers: just do your best.
+          </p>
+        </div>
+        <h2 class="consent-sheet-title" id="consent-sheet-title">Participant information sheet</h2>
+        <div class="consent-sheet" role="region" aria-labelledby="consent-sheet-title" tabindex="0">
+          <h3>1. Purpose of the study</h3>
+          <p>
+            We are a team of students at EPFL carrying out this study as part of the Digital
+            Education course. We want to understand how different kinds of support during a short
+            online lesson on recursive programming help students understand recursion.
+          </p>
+
+          <h3>2. Who can take part</h3>
+          <p>
+            Undergraduate students, preferably in science or engineering, with some experience of
+            introductory programming. No prior knowledge of recursion is required. About 20 people
+            will take part in the study.
+          </p>
+
+          <h3>3. What participation involves</h3>
+          <p>
+            You will be randomly assigned to one of two versions of the lesson. The two versions
+            differ in the support offered during the exercises. Everyone follows the same steps:
+          </p>
+          <ol>
+            <li><strong>Pretest:</strong> 12 multiple-choice questions on recursion, before the lesson.</li>
+            <li><strong>Lesson:</strong> block-based exercises on recursive functions.</li>
+            <li><strong>Posttest:</strong> 12 multiple-choice questions, after the lesson.</li>
+            <li><strong>Questionnaire:</strong> three short rating statements and an optional comment.</li>
+          </ol>
+          <p>
+            The tests are not graded and no scores are shown to you. In total, participation takes
+            about 30 minutes. Please complete
+            the study in one sitting, on a computer. Your progress is saved in your browser, so a
+            page refresh will not make you lose your answers.
+          </p>
+
+          <h3>4. Data we collect</h3>
+          <ul>
+            <li>A pseudonym that you choose yourself when you start (it must not be your real name). We do not collect your name or email address.</li>
+            <li>Your answers to the pretest, the posttest and the questionnaire, including optional comments.</li>
+            <li>Your activity in the lesson: the solutions you submit to the exercises and whether they are correct.</li>
+            <li>The lesson version you were assigned and time stamps of your progress.</li>
+          </ul>
+          <p>
+            Please do not write your name or any other identifying information, including in the
+            optional comments.
+          </p>
+          <p class="ai-only">
+            <strong>Use of an AI service:</strong> in your version of the lesson, when you check an
+            exercise, the exercise description and the solution you submitted are sent through our
+            server to an external AI service (Claude, provided by Anthropic) so that it can generate
+            the recursion tree and the short explanation you see. Your pseudonym and other
+            personal information are not sent with it.
+          </p>
+
+          <h3>5. How your data is used and protected</h3>
+          <ul>
+            <li>Your data is used only for this course project: to analyse the results and write the project report. Results are reported in aggregate form; short anonymous excerpts of comments may be quoted.</li>
+            <li>Your data is linked to you only through your pseudonym.</li>
+            <li>Data is stored on secure Cloudflare servers and is accessible only to the project team.</li>
+            <li>Data is kept until the end of the semester and then deleted.</li>
+          </ul>
+
+          <h3>6. Your rights</h3>
+          <ul>
+            <li>Participation is entirely voluntary. You may decline to take part without any consequence.</li>
+            <li>You may stop at any time, without giving a reason, simply by closing the page.</li>
+            <li>You may ask us to delete your data at any time by contacting us with your pseudonym. Please remember your pseudonym, as it is the only way for us to find your data.</li>
+            <li>You may ask us any question about the study before, during or after your participation.</li>
+          </ul>
+
+          <h3>7. Contact</h3>
+          <p>
+            For any question, or to ask for your data to be deleted, contact the research team:
+          </p>
+          <ul>
+            <li>Nathan Tissières (<a href="mailto:nathan.tissieres@epfl.ch">nathan.tissieres@epfl.ch</a>)</li>
+            <li>Noah Robert (<a href="mailto:noah.robert@epfl.ch">noah.robert@epfl.ch</a>)</li>
+            <li>Michael Freeman (<a href="mailto:michael.freeman@epfl.ch">michael.freeman@epfl.ch</a>)</li>
+          </ul>
+        </div>
+        <label class="field-label" for="participant-code">Pseudonym</label>
+        <p class="field-help">
+          Choose a pseudonym that is not your real name, and remember it: you will need it if you
+          want to ask us to delete your data. Use 2 to 40 letters, numbers, hyphens or underscores
+          (no spaces).
+        </p>
+        <input id="participant-code" class="text-input" type="text" maxlength="40"
+          autocomplete="off" placeholder="e.g. blue-fox-42" />
+        <label class="consent-check">
+          <input id="consent-checkbox" type="checkbox" />
+          <span>I have read and understood the participant information sheet. I understand that my participation is voluntary and that I can stop at any time. I agree to take part in this study and to the use of my data as described.</span>
+        </label>
+        <p id="consent-error" class="feedback error hidden" role="alert"></p>
+        <button id="start-study-btn" class="primary-btn" type="button">Start study</button>
+      </section>
+
+      <section id="pretest-phase" class="study-screen card hidden">
+        <p class="eyebrow">Phase 1 · Pretest</p>
+        <h1>Pretest</h1>
+        <p>
+          Answer each question independently. You will see one question at a time.
+          You cannot return to a question after submitting your answer. No hints,
+          correctness feedback, scores, or AI-generated recursion trees are available.
+        </p>
+        <div id="pretest-content" class="test-content" aria-live="polite"></div>
+      </section>
+
+      <div id="lesson-phase" class="study-screen hidden">
       <section id="intro" class="hero">
         <div>
           <p class="eyebrow">Milestone 4 prototype</p>
@@ -316,9 +438,42 @@
           </p>
         </details>
       </section>
+        <div class="phase-footer">
+          <button id="lesson-continue-btn" class="primary-btn" type="button">
+            Continue to the posttest
+          </button>
+        </div>
+      </div>
+
+      <section id="posttest-phase" class="study-screen card hidden">
+        <p class="eyebrow">Phase 3 · Posttest</p>
+        <h1>Posttest</h1>
+        <p>
+          Answer each question independently. You will see one question at a time.
+          You cannot return to a question after submitting your answer. No hints,
+          correctness feedback, scores, or AI-generated recursion trees are available.
+        </p>
+        <div id="posttest-content" class="test-content" aria-live="polite"></div>
+      </section>
+
+      <section id="questionnaire-phase" class="study-screen card hidden">
+        <p class="eyebrow">Phase 4 · Questionnaire</p>
+        <h1>Final questionnaire</h1>
+        <div id="questionnaire-content" class="test-content"></div>
+      </section>
+
+      <section id="complete-phase" class="study-screen card hidden">
+        <p class="eyebrow">Study completed</p>
+        <h1>Thank you for participating.</h1>
+        <p>Your responses have been saved on this device and will be synchronized with the study server when it is reachable.</p>
+      </section>
+
     </main>
 
     <script src="recursion-tree.js?v=M4.10.29"></script>
     <script src="script.js?v=M4.10.29"></script>
+    <script src="assessment.js?v=assessment-v1"></script>
+    <script src="questionnaire.js?v=questionnaire-v1"></script>
+    <script src="session.js?v=study-v3"></script>
   </body>
 </html>

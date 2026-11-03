@@ -121,6 +121,134 @@ async function generateTree(apiKey, body) {
   return { tree: JSON.parse(textBlock.text), status: 200 };
 }
 
+const STUDY_PHASES = new Set(['consent', 'pretest', 'lesson', 'posttest', 'questionnaire', 'complete']);
+
+function validateStudySync(body) {
+  if (!body || typeof body !== 'object' || !body.session) return 'A session object is required.';
+  const session = body.session;
+  if (typeof session.sessionId !== 'string' || !/^[A-Za-z0-9_-]{8,80}$/.test(session.sessionId)) {
+    return 'Invalid sessionId.';
+  }
+  if (typeof session.participantCode !== 'string' ||
+      !/^[A-Za-z0-9_-]{2,40}$/.test(session.participantCode)) {
+    return 'Invalid participantCode.';
+  }
+  if (session.startedAt !== undefined &&
+      (typeof session.startedAt !== 'string' || session.startedAt.length > 40)) {
+    return 'Invalid startedAt.';
+  }
+  if (!['ai', 'control'].includes(session.condition)) return 'Invalid condition.';
+  if (!STUDY_PHASES.has(session.phase)) return 'Invalid phase.';
+  if (session.consentGiven !== true) return 'Consent is required before synchronization.';
+  if (!Array.isArray(body.events) || body.events.length > 50) return 'events must be an array of at most 50 items.';
+
+  for (const event of body.events) {
+    if (!event || typeof event !== 'object') return 'Invalid event.';
+    if (typeof event.eventId !== 'string' || !/^[A-Za-z0-9_-]{8,100}$/.test(event.eventId)) return 'Invalid eventId.';
+    if (typeof event.eventType !== 'string' || !/^[a-z][a-z0-9_]{1,60}$/.test(event.eventType)) return 'Invalid eventType.';
+    if (!STUDY_PHASES.has(event.phase)) return 'Invalid event phase.';
+    if (typeof event.clientCreatedAt !== 'string' || event.clientCreatedAt.length > 40) return 'Invalid event timestamp.';
+    let payload;
+    try {
+      payload = JSON.stringify(event.payload ?? {});
+    } catch {
+      return 'Invalid event payload.';
+    }
+    if (payload.length > 12000) return 'Event payload is too large.';
+  }
+  return null;
+}
+
+async function handleStudySync(request, env, origin) {
+  if (!env.DB) {
+    return jsonResponse({ error: 'storage_not_configured' }, 503, origin);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ error: 'invalid_request', detail: 'Body is not valid JSON.' }, 400, origin);
+  }
+
+  const invalid = validateStudySync(body);
+  if (invalid) return jsonResponse({ error: 'invalid_request', detail: invalid }, 400, origin);
+
+  const study = body.session;
+  const now = new Date().toISOString();
+
+  try {
+    const existing = await env.DB.prepare(
+      'SELECT session_id, participant_code, condition FROM study_sessions WHERE session_id = ?'
+    ).bind(study.sessionId).first();
+
+    const participantSession = await env.DB.prepare(
+      'SELECT session_id FROM study_sessions WHERE participant_code = ?'
+    ).bind(study.participantCode).first();
+
+    if (existing && (
+      existing.participant_code !== study.participantCode ||
+      existing.condition !== study.condition
+    )) {
+      return jsonResponse({ error: 'session_conflict' }, 409, origin);
+    }
+    if (participantSession && participantSession.session_id !== study.sessionId) {
+      return jsonResponse({ error: 'participant_code_already_used' }, 409, origin);
+    }
+
+    if (!existing) {
+      await env.DB.prepare(`
+        INSERT INTO study_sessions
+          (session_id, participant_code, condition, phase, consent_given, started_at, created_at, updated_at)
+        VALUES (?, ?, ?, ?, 1, ?, ?, ?)
+      `).bind(
+        study.sessionId,
+        study.participantCode,
+        study.condition,
+        study.phase,
+        study.startedAt || now,
+        now,
+        now
+      ).run();
+    } else {
+      await env.DB.prepare(`
+        UPDATE study_sessions
+        SET phase = ?, updated_at = ?
+        WHERE session_id = ?
+      `).bind(study.phase, now, study.sessionId).run();
+    }
+
+    const acceptedEventIds = [];
+    if (body.events.length > 0) {
+      const statements = body.events.map((event) => {
+        acceptedEventIds.push(event.eventId);
+        return env.DB.prepare(`
+          INSERT OR IGNORE INTO study_events
+            (event_id, session_id, event_type, phase, payload_json, client_created_at)
+          VALUES (?, ?, ?, ?, ?, ?)
+        `).bind(
+          event.eventId,
+          study.sessionId,
+          event.eventType,
+          event.phase,
+          JSON.stringify(event.payload ?? {}),
+          event.clientCreatedAt
+        );
+      });
+      await env.DB.batch(statements);
+    }
+
+    return jsonResponse({ ok: true, acceptedEventIds }, 200, origin);
+  } catch (error) {
+    // A concurrent request may have claimed the same participant code between our check and the insert.
+    if (String(error && error.message).includes('UNIQUE constraint failed: study_sessions.participant_code')) {
+      return jsonResponse({ error: 'participant_code_already_used' }, 409, origin);
+    }
+    console.error('Study data synchronization failed:', error);
+    return jsonResponse({ error: 'storage_error' }, 500, origin);
+  }
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
@@ -145,6 +273,11 @@ export default {
       return jsonResponse({ error: 'method_not_allowed' }, 405, origin);
     }
 
+    const requestUrl = new URL(request.url);
+    if (requestUrl.pathname === '/api/sync') {
+      return handleStudySync(request, env, origin);
+    }
+
     let body;
     try {
       body = await request.json();
@@ -155,6 +288,12 @@ export default {
     const invalid = validateBody(body);
     if (invalid) {
       return jsonResponse({ error: 'invalid_request', detail: invalid }, 400, origin);
+    }
+
+    // Fail fast with a clear message when the secret is missing (e.g. no .dev.vars in worker/).
+    if (!env.CLAUDE_API_KEY) {
+      console.error('CLAUDE_API_KEY is not set. Create worker/.dev.vars locally or run "wrangler secret put CLAUDE_API_KEY".');
+      return jsonResponse({ error: 'ai_not_configured' }, 503, origin);
     }
 
     try {
