@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Functional Education</title>
-    <link rel="stylesheet" href="styles.css?v=questionnaire-v4" />
+    <link rel="stylesheet" href="styles.css?v=lesson-navigation-v5" />
   </head>
   <body>
     <header class="topbar">
@@ -345,7 +345,16 @@
           </span>
         </div>
 
-        <div id="exercise-selector" class="exercise-selector" aria-label="Exercise selector"></div>
+        <nav class="exercise-navigation" aria-labelledby="exercise-navigation-title">
+          <h3 id="exercise-navigation-title">Choose an exercise</h3>
+          <p id="exercise-navigation-help">
+            There are 4 exercises. Click any button below to switch exercises at any time,
+            even if you are stuck. A checkmark means you have solved that exercise correctly.
+            Switching exercises clears your current block arrangement, but keeps your completion checkmarks.
+          </p>
+          <p id="exercise-progress" role="status"></p>
+          <div id="exercise-selector" class="exercise-selector" aria-label="Exercises" aria-describedby="exercise-navigation-help"></div>
+        </nav>
 
         <p id="exercise-prompt" class="prompt">
           Arrange the blocks in the correct order to define a recursive function.
@@ -443,6 +452,18 @@
             Continue to the posttest
           </button>
         </div>
+        <dialog id="posttest-confirmation" class="posttest-confirmation" aria-labelledby="posttest-confirmation-title" aria-describedby="posttest-confirmation-message">
+          <h2 id="posttest-confirmation-title">Move on to the posttest?</h2>
+          <p id="posttest-confirmation-message">
+            You have not finished all 4 exercises. You can switch exercises using the
+            “Choose an exercise” section above. If you are stuck and want to finish
+            anyway, click “Proceed to posttest”.
+          </p>
+          <form method="dialog" class="controls">
+            <button class="secondary-btn" value="back" autofocus>Back to exercises</button>
+            <button class="primary-btn" value="proceed">Proceed to posttest</button>
+          </form>
+        </dialog>
       </div>
 
       <section id="posttest-phase" class="study-screen card hidden">
@@ -471,9 +492,9 @@
     </main>
 
     <script src="recursion-tree.js?v=M4.10.29"></script>
-    <script src="script.js?v=M4.10.29"></script>
-    <script src="assessment.js?v=assessment-v1"></script>
+    <script src="script.js?v=M4.11.05.2"></script>
+    <script src="assessment.js?v=assessment-v2"></script>
     <script src="questionnaire.js?v=questionnaire-v1"></script>
-    <script src="session.js?v=study-v3"></script>
+    <script src="session.js?v=study-v4"></script>
   </body>
 </html>

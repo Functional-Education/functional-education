@@ -25,7 +25,8 @@
     consentCheckbox: document.getElementById('consent-checkbox'),
     consentError: document.getElementById('consent-error'),
     startButton: document.getElementById('start-study-btn'),
-    lessonContinue: document.getElementById('lesson-continue-btn')
+    lessonContinue: document.getElementById('lesson-continue-btn'),
+    posttestConfirmation: document.getElementById('posttest-confirmation')
   };
 
   let session = loadSession();
@@ -273,7 +274,25 @@
   }
 
   elements.startButton.addEventListener('click', startStudy);
-  elements.lessonContinue.addEventListener('click', () => setPhase('posttest'));
+  elements.lessonContinue.addEventListener('click', () => {
+    if (!session || session.phase !== 'lesson') return;
+    if (window.areAllExercisesCompleted()) {
+      setPhase('posttest');
+      return;
+    }
+    elements.posttestConfirmation.returnValue = '';
+    elements.posttestConfirmation.showModal();
+  });
+
+  elements.posttestConfirmation.addEventListener('close', () => {
+    if (!session || session.phase !== 'lesson') return;
+    if (elements.posttestConfirmation.returnValue === 'proceed') {
+      setPhase('posttest');
+      return;
+    }
+    document.querySelector('#exercise-selector .active').focus();
+    document.getElementById('exercise-navigation-title').scrollIntoView({ block: 'center' });
+  });
 
   window.addEventListener('online', flushOutbox);
   document.addEventListener('visibilitychange', () => {

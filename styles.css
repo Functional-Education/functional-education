@@ -215,6 +215,22 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.exercise-navigation {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.exercise-navigation h3 {
+  margin-top: 0;
+}
+
+#exercise-progress {
+  font-weight: 700;
+}
+
 .exercise-selector {
   display: flex;
   flex-wrap: wrap;
@@ -507,6 +523,28 @@ button {
 .secondary-btn {
   background: #e2e8f0;
   color: var(--text);
+}
+
+.posttest-confirmation {
+  width: min(540px, calc(100% - 2rem));
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.posttest-confirmation::backdrop {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.posttest-confirmation h2 {
+  margin-top: 0;
+}
+
+.posttest-confirmation .controls {
+  flex-wrap: wrap;
 }
 
 .feedback {

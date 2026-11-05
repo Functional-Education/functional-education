@@ -217,12 +217,11 @@ function hasStandardShape(root, ifId, baseId, recursiveId) {
   const children = root.children || [];
   if (children.length !== 2) return false;
 
-  const ifNode = children.find((entry) => entry.id === ifId);
-  const recursiveNode = children.find((entry) => entry.id === recursiveId);
+  const [ifNode, recursiveNode] = children;
 
-  if (!ifNode || !recursiveNode) return false;
-  if (children.some((entry) => entry.id !== ifId && entry.id !== recursiveId)) return false;
+  if (ifNode.id !== ifId || recursiveNode.id !== recursiveId) return false;
   if (ifNode.children.length !== 1 || ifNode.children[0].id !== baseId) return false;
+  if (ifNode.children[0].children.length > 0) return false;
   if (recursiveNode.children.length > 0) return false;
 
   return true;
@@ -319,6 +318,8 @@ function removeBlockById(list, blockId) {
 
 function renderExerciseSelector() {
   exerciseSelector.innerHTML = '';
+  document.getElementById('exercise-progress').textContent =
+    `${completedExercises.size} of ${exercises.length} exercises completed`;
 
   exercises.forEach((exercise, index) => {
     const button = document.createElement('button');
@@ -326,6 +327,8 @@ function renderExerciseSelector() {
     const isActive = index === currentExerciseIndex;
     const isCompleted = completedExercises.has(exercise.id);
     button.className = `exercise-chip ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}`.trim();
+    button.setAttribute('aria-pressed', String(isActive));
+    button.setAttribute('aria-label', `${exercise.label}${isCompleted ? ', completed' : ', not completed'}`);
 
     const label = document.createElement('span');
     label.className = 'exercise-chip-label';
@@ -499,7 +502,18 @@ function renderNode(entry, parentNode, isNested = false) {
 
 function isCorrectSolution() {
   ensureFunctionRoot();
-  return hasStandardShape(selectedOrder[0], 'if', 'return-base', 'recursive');
+  const root = selectedOrder[0];
+  if (hasStandardShape(root, 'if', 'return-base', 'recursive')) return true;
+
+  const exerciseId = getCurrentExercise().id;
+  if (exerciseId === 'sum') {
+    return hasStandardShape(root, 'if', 'bait-2', 'recursive') ||
+      hasStandardShape(root, 'bait-1', 'return-base', 'recursive');
+  }
+  if (exerciseId === 'reverse') {
+    return hasStandardShape(root, 'if', 'bait-5', 'recursive');
+  }
+  return false;
 }
 
 function launchConfetti() {
@@ -686,3 +700,4 @@ window.resetActivity = resetActivity;
 window.isCorrectSolution = isCorrectSolution;
 window.getLearningStateSnapshot = getLearningStateSnapshot;
 window.restoreLearningState = restoreLearningState;
+window.areAllExercisesCompleted = () => exercises.every((exercise) => completedExercises.has(exercise.id));
